@@ -18,7 +18,7 @@ export const UserContext = createContext();
 
 const Routing = () => {
   const navigate = useNavigate();
-  const { state, dispatch } = useContext(UserContext);
+  const { dispatch } = useContext(UserContext);
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -27,7 +27,6 @@ const Routing = () => {
         type: 'USER',
         payload: user,
       });
-      navigate('/');
     } else {
       navigate('/signin');
     }
