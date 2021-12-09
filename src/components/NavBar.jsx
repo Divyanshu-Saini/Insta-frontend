@@ -25,6 +25,9 @@ const NavBar = () => {
           <li key='create'>
             <Link to='/create'>Add Post</Link>
           </li>
+          <li key='myfollowerpost'>
+            <Link to='/myfollowerpost'>My following Posts</Link>
+          </li>
           <li key='signout'>
             <button className='btn waves-effect waves-light red' onClick={LogOut}>
               Logout

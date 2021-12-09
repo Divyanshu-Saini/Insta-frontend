@@ -9,6 +9,8 @@ import Login from './components/screens/Login';
 import Home from './components/screens/Home';
 import Profile from './components/screens/Profile';
 import CreatePost from './components/screens/CreatePost';
+import UserProfile from './components/screens/UserProfile';
+import SubscribesUserPost from './components/screens/SubscribesUserPost';
 import { initialState, reducer } from './reducers/userReducer';
 
 import 'materialize-css/dist/css/materialize.min.css';
@@ -37,8 +39,10 @@ const Routing = () => {
       <Route exat path='/' element={<Home />}></Route>
       <Route path='/signin' element={<Login />}></Route>
       <Route path='/signup' element={<Signup />}></Route>
-      <Route path='/profile' element={<Profile />}></Route>
+      <Route exact path='/profile' element={<Profile />}></Route>
       <Route path='/create' element={<CreatePost />}></Route>
+      <Route path='/profile/:userid' element={<UserProfile />}></Route>
+      <Route path='/myfollowerpost' element={<SubscribesUserPost />}></Route>
     </Routes>
   );
 };
